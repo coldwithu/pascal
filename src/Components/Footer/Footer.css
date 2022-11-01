@@ -1,0 +1,97 @@
+.footer{
+    background-color: #E7EEFB;
+    bottom: 0;
+    width: 100%;
+    height: 430px;
+    position: relative;
+}
+.footer span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+.footer__inner{
+    display: flex;
+    position: relative;
+    top: 50px;
+
+}
+.contacts{
+    width: 521px;
+    height: 300px;
+
+}
+.contacts-p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+
+    letter-spacing: 0.02em;
+    color: #000000;
+    opacity: 0.6;
+    margin-bottom: 25px;
+
+}
+.contacts a{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.contacts__cards{
+    position: relative;
+    display: grid;
+
+    column-gap: 70px;
+    row-gap: 50px;
+    grid-template-columns: 198px 253px;
+
+
+}
+.contact__card{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.address{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+}
+.address__data a{
+    margin-top: 25px;
+    display: flex;
+
+}
+.address__data a img{
+    margin-left: 15px;
+
+}
+.address__data a p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #000000;
+}
+.ellipses{
+    margin-top: 70px;
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+.ellipse{
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+}

@@ -1,0 +1,12 @@
+.main{
+
+}
+
+.outlet-container{
+    position: relative;
+    top:100px;
+    width: 100%;
+    height: 1120px;
+    max-width: 1040px;
+    margin: 0 auto 0;
+}
