@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import editIcon from "../../assets/img/edit.svg"
-import "./CurrentCourse.css"
+import "./CurrentCourse.scss"
 import privacyIcon from '../../assets/img/privacy.svg'
+import {NavLink} from "react-router-dom";
+
+
+
 
 const CurrentCourse = () => {
+    const [checked, setChecked] = useState(1);
+
     return(
         <div className="current-course">
             <div className="container">
@@ -18,8 +24,29 @@ const CurrentCourse = () => {
 
                         <div className="current-course__head-info">
                             <div className="sections">
-                                <div className="section"><span>О программе</span></div>
-                                <div className="section"><span>Обучение</span></div>
+                                <div className="section">
+                                    <input
+                                        className="custom-radio"
+                                        type="radio" id="section-1"
+                                        name="section"
+                                        defaultChecked={true}
+                                        value="program"
+                                        onClick={() => setChecked(1)}
+                                    />
+                                    <label id="labelID" htmlFor="section-1">О программе</label>
+                                </div>
+
+                                <div className="section">
+                                    <input
+                                        className="custom-radio"
+                                        type="radio"
+                                        id="section-2"
+                                        name="section"
+                                        value="education"
+                                        onClick={() => setChecked(2)}
+                                    />
+                                    <label id="labelID" htmlFor="section-2">Обучение</label>
+                                </div>
                             </div>
                             <div className="info">
                                 <div className="status">
@@ -31,22 +58,43 @@ const CurrentCourse = () => {
                                     <img src={privacyIcon} alt="privacy Icon"/>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
                 <div className="course-description">
-                    <div className="course-description-text">
-                        <h1>Общее описание</h1>
-                        <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
-                            Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
-                            Эта парадигматическая страна.</p>
+                    <div className="course-description-text" id="program-description">
+                        {
+                            checked === 1
+                                ?
+                                <div id="content-1">
+                                    <h1>Общее описание</h1>
+                                    <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                                        Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                                        Эта парадигматическая страна.</p>
 
-                        <h1>Для кого программа</h1>
-                        <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
-                            Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
-                            Эта парадигматическая страна.</p>
+                                    <h1>Для кого программа</h1>
+                                    <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                                        Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                                        Эта парадигматическая страна.</p>
+                                </div>
+                                :
+                                <div id="content-2">
+                                    <h1>Общее описание 2</h1>
+                                    <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                                        Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                                        Эта парадигматическая страна.Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                                        Эта парадигматическая страна.</p>
 
+                                    <h1>Для кого программа 2</h1>
+                                    <p>Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                                        Маленький ручеек </p>
+                                </div>
+                        }
                     </div>
+
+
                     <div className="course-description-sidebar">
                         <div className="flex-content">
                             <p id="title">Формат</p>
@@ -58,7 +106,9 @@ const CurrentCourse = () => {
                         </div>
 
                         <div className="flex-content">
-                            <button className="description-button">Перейти к обучению</button>
+                            <NavLink to={"lessons"}>
+                                <button className="description-button">Перейти к обучению</button>
+                            </NavLink>
                             <div className="icon"></div>
                         </div>
 

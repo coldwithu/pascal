@@ -6,6 +6,8 @@ import Courses from "./Pages/Courses";
 import Course from "./Pages/Course"
 import Knowledge from "./Pages/Knowledge";
 import Layout from "./Components/Layout/Layout";
+import Lessons from "./Pages/Lessons";
+import Lesson from "./Components/Lesson/Lesson";
 
 
 function App() {
@@ -15,7 +17,10 @@ function App() {
                     <Route path="home" element={<Home/>}/>
                     <Route path="education" element={<Education/>}/>
                     <Route path="courses" element={<Courses/>}/>
-                    <Route path="course" element={<Course/>}/>
+                    <Route path="courses/:id" element ={<Course/>}/>
+                    <Route path="courses/:id/lessons/*" element={<Lessons/>}>
+                        <Route path=":id" element={<Lesson/>}/>
+                    </Route>
                     <Route path="knowledge" element={<Knowledge/>}/>
                 </Route>
             </Routes>

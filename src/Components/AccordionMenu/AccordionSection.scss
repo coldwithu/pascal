@@ -1,0 +1,49 @@
+.accordion-section{
+  border-top: 1px solid #B3B3B3;
+
+  &__inner{
+    padding: 20px 0;
+  }
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    h1{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      margin-bottom: 5px;
+    }
+    &-img{
+      transition: rotate .1s linear;
+      &.active{
+        rotate: 180deg;
+
+      }
+    }
+  }
+
+  &__item{
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    padding: 5px 0 5px 30px;
+    cursor: pointer;
+    transition: background-color .05s linear;
+
+    &:hover{
+      background-color: #A0BCEF;
+      border-radius: 4px;
+    }
+    &.active{
+      background-color: #0C52C4;
+      border-radius: 4px;
+      color: white;
+    }
+  }
+}

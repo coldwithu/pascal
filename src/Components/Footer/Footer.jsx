@@ -1,5 +1,5 @@
 import React from "react";
-import './Footer.css';
+import './Footer.scss';
 import footerArrow from '../../assets/img/footer-arrow.svg'
 
 const Footer = () => {

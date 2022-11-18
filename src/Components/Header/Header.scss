@@ -1,0 +1,218 @@
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    color: #33363A;
+    background-color: white;
+}
+
+.header__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #33363A;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+.header__logo-title {
+    font-family: 'Rubik', sans-serif;
+    margin-left: 15px;
+    font-size: 32px;
+    font-weight: 500;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 13px;
+    color: #33363A;
+    text-decoration: none;
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: #0C52C4;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        transition: 0.25s;
+    }
+
+    &:hover:before {
+        width: 100%;
+    }
+    &.active{
+        &:before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #0C52C4;
+            position: absolute;
+            top: 43px;
+            left: 0;
+            transition: 0.25s;
+        }
+    }
+}
+
+.header__other {
+    display: flex;
+    align-items: center;
+
+    &-search {
+        &-img {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        &-bar{
+            display: none;
+        }
+        &-bar.active{
+            position: absolute;
+            display: flex;
+            z-index: 2;
+            top:-12px;
+            left: 50%;
+            transform: translateX(-44%);
+            width: 63%;
+            height: 72px;
+            background-color: white;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #000000;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                transition: 0.25s;
+            }
+
+            input{
+                display: flex;
+                align-self: center;
+                width: 100%;
+                border: none;
+                font-style: normal;
+                font-size: 18px;
+                line-height: 20px;
+                color: #464646;
+
+            }
+            button{
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+            }
+        }
+
+    }
+}
+
+
+
+.lang-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+
+    ul {
+        position: absolute;
+        margin-top: 20px;
+        transform: translate(-5px);
+        padding: 0;
+        background-color: white;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        display: none;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: #33363A;
+                cursor: pointer;
+                display: block;
+                padding: 7px 15px;
+
+                &:hover {
+                    background-color: #E7EEFB;
+                }
+            }
+        }
+    }
+}
+
+.selected-lang {
+    cursor: pointer;
+
+    img {
+        margin-left: 6px;
+        margin-bottom: 1px;
+    }
+}
+
+.lang-menu:hover {
+    ul {
+        display: block;
+    }
+
+    img {
+        rotate: 180deg;
+    }
+}
+
+.login-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 9px 22px;
+    color: #33363A;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid #33363A;
+    border-radius: 4px;
+    margin-left: 23px;
+    transition: color .075s linear;
+
+    &:hover {
+        color: #0C52C4;
+        border: 1px solid #0C52C4;
+    }
+}

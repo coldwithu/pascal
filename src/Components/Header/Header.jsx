@@ -1,14 +1,18 @@
-import React from "react";
-import './Header.css'
-// import logo from "../../assets/img/logo.svg";
+import React, {useState} from "react";
+import './Header.scss'
+
 import logo from "../../assets/img/logo.svg"
 import langSwitch from "../../assets/img/lang-switch-img.svg";
 import search from "../../assets/img/search.svg";
+import close from "../../assets/img/close.svg";
 import {NavLink} from 'react-router-dom';
 
 
-
 const Header = () => {
+    const [findIcon, setFindIcon] = useState(search);
+    const handleClick = () => {
+        findIcon === search ? setFindIcon(close) : setFindIcon(search);
+    }
     return(
 
         <div className="header">
@@ -21,9 +25,9 @@ const Header = () => {
                     </NavLink>
 
                     <nav className="nav">
-                        <NavLink className="nav__link" to="/education">Обучение</NavLink>
-                        <NavLink className="nav__link" to="/courses">Программы и курсы</NavLink>
-                        <NavLink className="nav__link" to="/knowledge">База знаний</NavLink>
+                        <NavLink className={"nav__link"} to="/education">Обучение</NavLink>
+                        <NavLink className={"nav__link"} to="/courses" >Программы и курсы</NavLink>
+                        <NavLink className={"nav__link"} to="/knowledge" >База знаний</NavLink>
                     </nav>
 
                     <div className="header__other">
@@ -41,7 +45,12 @@ const Header = () => {
                                 </li>
                             </ul>
                         </div>
-                        <img className="header__other-search-img" src={search} alt="search img"/>
+                        <div className="header__other-search">
+                            <img className="header__other-search-img" src={findIcon} alt="search img" onClick={handleClick}/>
+                            <div className={findIcon === close ? 'header__other-search-bar active' : 'header__other-search-bar'}>
+                                <input type='text' placeholder="Поиск" id="searchInput"/>
+                            </div>
+                        </div>
                         <button className="login-btn">Вход</button>
                     </div>
                 </div>
