@@ -29,7 +29,7 @@ const Footer = () => {
 
                             </div>
                             <div className="contact__card">
-                                <span>Еще какая-то мандула:</span>
+                                <span>Сотрудничество</span>
                                 <a href="mailto:grikob@yandex.ru">grikob@yandex.ru</a>
 
                             </div>
@@ -40,9 +40,9 @@ const Footer = () => {
                     <div className="address">
                         <div className="address__data">
                             <p className="contacts-p">Наш адрес</p>
-                            <span>г. Зеленоград, пл. Шокина, 1</span>
+                            <span className="address__p">г. Зеленоград, пл. Шокина, 1</span>
                             <a href="https://yandex.ru/maps/-/CCUZNWv-wB">
-                                <p>Показать на карте</p>
+                                <p className='address__p'>Показать на карте</p>
                                 <img src={footerArrow} alt="arrow img"/>
                             </a>
 

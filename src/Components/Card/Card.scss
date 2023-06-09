@@ -5,7 +5,7 @@
     border-radius: 12px;
     margin-bottom: 18px;
     cursor: pointer;
-
+    overflow: hidden;
     a {
         text-decoration: none;
         color: #000000;
@@ -27,8 +27,10 @@
     right: -20px;
     top: -20px;
     border-radius: 12px;
+    object-fit: cover;
     filter: brightness(90%);
     transition: filter .5s ease-in-out;
+    will-change: brightness, blur;
 }
 .card__title {
     position: relative;
@@ -75,3 +77,4 @@
         background-color: black;
     }
 }
+

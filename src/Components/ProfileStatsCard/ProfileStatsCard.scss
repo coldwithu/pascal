@@ -1,0 +1,51 @@
+.stats-card{
+  border: 1px solid #B3B3B3;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap:20px;
+  &__text{
+    width: 208px;
+
+  }
+  &__diagram{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1257D8;
+  }
+}
+.stats-title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.svg{
+  width: 80px;
+}
+.svg-circle-bg {
+  fill: none;
+}
+
+.svg-circle {
+  fill: none;
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+.svg-circle-text {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #33363A;
+  text-anchor: middle;
+  font-weight: bold;
+}

@@ -8,7 +8,7 @@ const videoSrc = {
     sources: [
         {
             // watch?v=f3hNgtuEEHg
-            src: "f3hNgtuEEHg",
+            src: "watch?v=f3hNgtuEEHg",
             provider: "youtube"
         }
     ]

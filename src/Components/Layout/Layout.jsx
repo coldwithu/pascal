@@ -4,7 +4,6 @@ import {Outlet} from 'react-router'
 import './Layout.css'
 import Footer from "../Footer/Footer";
 
-
 const Layout = () => {
     return(
         <div className="layout">
@@ -13,7 +12,6 @@ const Layout = () => {
                 <Outlet/>
             </div>
             <Footer/>
-
         </div>
     )
 }

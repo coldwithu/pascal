@@ -22,19 +22,19 @@ const AccordionSection = ({inner}) => {
         <div className="accordion-section">
             <div className="accordion-section__inner">
                 <div className="accordion-section__title" onClick={handleClick}>
-                    <h1>{inner.title}</h1>
+                    <h1>Test group</h1>
                     <img className={`accordion-section__title-img ${active ? 'active': ''}`} src={arrow} alt="arrow img"/>
                 </div>
 
                 <div style={{display: `${showContent()}`}}>
                     {
-                        inner.lessons.map((item, index) =>
+                        inner.map((item, index) =>
                             <NavLink
                                 key={index}
-                                to={item.l_id}
+                                to={item.uid}
                                 className="accordion-section__item"
                             >
-                                {item.l_title}
+                                {item.title}
                             </NavLink>
                         )
                     }

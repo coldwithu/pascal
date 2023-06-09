@@ -1,0 +1,87 @@
+.signup{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-form{
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    &__title{
+      font-family: 'Rubik', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: black;
+      margin: 35px 0;
+    }
+
+    &__inputs{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input{
+        box-sizing: border-box;
+        font-size: 18px;
+        padding: 5px 15px;
+        outline: none;
+        border: 1px solid #33363A;
+        border-radius: 5px;
+
+        &:focus{
+          border: 2px solid #0C52C4;
+        }
+      }
+    }
+
+    &__buttons{
+      margin-top: 40px;
+
+      &-signup{
+        font-size: 18px;
+        padding: 10px;
+        margin-right: 15px;
+        background-color: #0C52C4;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+      }
+      &-auth{
+        font-size: 18px;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        border-radius: 8px;
+        color: #0C52C4;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  img{
+    width: 72px;
+    height: 72px;
+  }
+  p{
+    font-family: 'Rubik', sans-serif;
+    margin-left: 15px;
+    font-size: 44px;
+    font-weight: 500;
+    color: black;
+  }
+}

@@ -1,0 +1,28 @@
+.carousel{
+  overflow: hidden;
+
+  button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  &__left{
+    left: -50px;
+  }
+
+  &__right{
+    right: -50px;
+  }
+}
+
+.carousel-visible{
+  display: flex;
+  gap: 20px;
+  transition: transform .5s ease;
+}

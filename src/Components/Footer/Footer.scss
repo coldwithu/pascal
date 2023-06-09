@@ -5,13 +5,6 @@
     height: 430px;
     position: relative;
 
-    span {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 20px;
-        color: #000000;
-    }
 }
 
 .footer__inner {
@@ -36,14 +29,6 @@
     margin-bottom: 25px;
 }
 
-.contacts a {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-    text-decoration: none;
-    color: #000000;
-}
 
 .contacts__cards {
     position: relative;
@@ -57,12 +42,34 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    span {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
 }
 
 .address {
     width: 300px;
     height: 300px;
     margin-left: 100px;
+
+    &__p{
+        font-weight: 400;
+    }
 }
 
 .address__data a {

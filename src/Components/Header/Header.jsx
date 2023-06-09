@@ -13,13 +13,12 @@ const Header = () => {
     const handleClick = () => {
         findIcon === search ? setFindIcon(close) : setFindIcon(search);
     }
-    return(
 
+    return(
         <div className="header">
             <div className="container">
                 <div className="header__inner">
-
-                    <NavLink className="header__logo" to="/home">
+                    <NavLink className="header__logo" to="/">
                         <img src={logo} alt="logo img"/>
                         <p className="header__logo-title">ПАСКАЛЬ</p>
                     </NavLink>
@@ -38,10 +37,10 @@ const Header = () => {
                             </div>
                             <ul>
                                 <li>
-                                    <a href="/src/Pages/Home.jsx">Ru</a>
+                                    <a href="/src/Pages/Home/Home.jsx">Ru</a>
                                 </li>
                                 <li>
-                                    <a href="/src/Pages/Home.jsx">En</a>
+                                    <a href="/src/Pages/Home/Home.jsx">En</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,7 +50,9 @@ const Header = () => {
                                 <input type='text' placeholder="Поиск" id="searchInput"/>
                             </div>
                         </div>
-                        <button className="login-btn">Вход</button>
+                        <NavLink to={"profile"}>
+                            <button className="login-btn">Вход</button>
+                        </NavLink>
                     </div>
                 </div>
             </div>
